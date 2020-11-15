@@ -43,3 +43,6 @@ jobs:
 
       - name: Install dependencies 👨🏻‍💻
         run: yarn
+
+      - name: Deploy web 🕸️
+        run: yarn run deploy

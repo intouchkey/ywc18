@@ -47,5 +47,9 @@ jobs:
       - name: Generate static files 📁
         run: yarn run generate
 
-      - name: Deploy web 🕸️
-        run: git config --local user.email "keyeducation2544@gmail.com" && git config --local user.name "Intouch Yutinatorn" && yarn run deploy
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v2.5.0
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./dist

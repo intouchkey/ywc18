@@ -1,6 +1,6 @@
 <template>
     <b-nav class="custom-bg-dark-blue">
-        <p>
+        <p class="first-page-search-text">
             <u>หน้าแรก</u> / <b>ค้นหา</b>
         </p>
     </b-nav>
@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style>
-p {
+.first-page-search-text {
   padding: 10px 0px 10px 8%;
   margin: 0px;
   color: #FFFFFF;

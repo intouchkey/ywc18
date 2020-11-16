@@ -1,8 +1,8 @@
 <template>
-<div>
-  <Header></Header>
-  <CustomBackground></CustomBackground>
-</div>
+  <div>
+    <Header></Header>
+    <CustomBackground></CustomBackground>
+  </div>
 </template>
 
 <script>

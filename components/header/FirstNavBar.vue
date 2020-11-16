@@ -34,14 +34,6 @@ export default {
   margin:0;
 }
 
-p {
-  padding-left: 8%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin: 0px;
-  color: #FFFFFF;
-}
-
 .input-border-a {
   border: 1px solid #ffca28;
 }

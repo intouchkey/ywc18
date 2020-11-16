@@ -13,6 +13,12 @@ export default {
 </script>
 
 <style>
+p {
+  padding: 10px 0px 10px 8%;
+  margin: 0px;
+  color: #FFFFFF;
+}
+
 .custom-bg-dark-blue {
   background-color: #293A7C; 
 } 

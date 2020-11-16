@@ -1,17 +1,17 @@
 <template>
-  <div class="filter-container">
-    FilterBox
+  <div class="restaurant-container">
+    RestaurantBox
   </div>
 </template>
 
 <script>
 export default {
-  name: "FilterBox",
+  name: "RestaurantBox",
 };
 </script>
 
 <style>
-.filter-container {
+.restaurant-container {
   border: 1px solid black;
 }
 </style>

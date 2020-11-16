@@ -2,7 +2,6 @@
   <div>
     <FirstNavBar></FirstNavBar>
     <SecondNavBar></SecondNavBar>
-    <SearchTextBar></SearchTextBar>
   </div>
 </template>
 

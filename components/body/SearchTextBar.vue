@@ -15,5 +15,6 @@ export default {
     color: black;
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 30px;
 }
 </style>

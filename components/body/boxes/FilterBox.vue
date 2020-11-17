@@ -6,16 +6,19 @@
       :selected="categorySelected"
       @update-selected="updateCategorySelected"
     ></CustomFormRadio>
+
     <CustomDropDown
       :items="provinces"
       topic="จังหวัด/ใกล้ฉัน"
       defaultText="พื้นที่ไกล้ฉัน"
     ></CustomDropDown>
+
     <CustomDropDown
       :items="priceRange"
       topic="ราคา"
       defaultText="กรุณาเลือก"
     ></CustomDropDown>
+
     <div v-if="categorySelected && categorySelected != 'ทั้งหมด'">
       <CustomFormRadio
         topic="ประเภทร้านอาหารและเครื่องดื่ม"

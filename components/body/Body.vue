@@ -15,7 +15,7 @@
         ></FilterBox>
       </div>
       <div class="col-sm-9 col-xs-12">
-        <RestaurantBox></RestaurantBox>
+        <RestaurantBoxList :merchants="merchants"></RestaurantBoxList>
       </div>
     </div>
   </div>
@@ -30,7 +30,8 @@ export default {
       categories: ['ทั้งหมด'],
       subcategories: {},
       priceRange: [],
-      provinces: []
+      provinces: [],
+      merchants: [],
     }
   },
 
@@ -46,12 +47,19 @@ export default {
     mapData: function (data) {
       data.categories.forEach((category) => {
         this.categories.push(category.name)
-        this.subcategories[category.name] = ['ทั้งหมด'].concat(category.subcategories)
-        this.subcategories[category.name] = [...new Set(this.subcategories[category.name])]
+        this.subcategories[category.name] = ['ทั้งหมด'].concat(
+          category.subcategories
+        )
+        this.subcategories[category.name] = [
+          ...new Set(this.subcategories[category.name]),
+        ]
       })
 
       this.priceRange = ['ทั้งหมด'].concat(data.priceRange)
-      this.provinces = ['พื้นที่ไกล้ฉัน', 'สถานที่ทั้งหมด'].concat(data.provinces)
+      this.provinces = ['พื้นที่ไกล้ฉัน', 'สถานที่ทั้งหมด'].concat(
+        data.provinces
+      )
+      this.merchants = data.merchants
     },
   },
 }

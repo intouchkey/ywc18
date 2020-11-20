@@ -1,20 +1,12 @@
 <template>
   <div class="custom-drop-down-container">
     <p class="topic">{{ topic }}</p>
-    <b-dropdown
-      block
-      size="sm"
-      split
-      :text="defaultText"
-      class="custom-dropdown"
-      variant="outline-secondary"
-      split-variant="outline-secondary"
-      menu-class="w-100"
-    >
-      <b-dropdown-item v-for="item in items" :key="item" :name="item">{{
-        item
-      }}</b-dropdown-item>
-    </b-dropdown>
+    <select :text="defaultText">
+      <option class="first-op" value="" disabled selected>
+        {{ defaultText }}
+      </option>
+      <option v-for="item in items" :key="item" :name="item">{{ item }}</option>
+    </select>
   </div>
 </template>
 
@@ -27,9 +19,17 @@ export default {
 
 <style>
 .custom-drop-down-container {
-  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+select {
+  width: 100%;
+  padding: 5px;
+  border-color: #ececec;
 }
 .topic {
   font-weight: bolder;
+}
+.first-op {
+  color: #ececec;
 }
 </style>

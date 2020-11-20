@@ -36,7 +36,7 @@ export default {
   props: ['categories', 'subcategories', 'priceRange', 'provinces'],
   data() {
     return {
-      categorySelected: '',
+      categorySelected: 'ร้านอาหารและเครื่องดื่ม',
       subcategorySelected: '',
     }
   },

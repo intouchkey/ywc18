@@ -1,15 +1,25 @@
 <template>
   <b-container class="restaurant-container">
-    <b-row>
-      <b-col cols="4">
+    <b-row class="h-80">
+      <b-col cols="3" class="no-pm">
         <b-img
-          class="cover-image"
+          class="img-fluid cover-image"
           :src="merchant.coverImageId"
           alt="Image"
         ></b-img>
       </b-col>
-      <b-col cols="8">
-        <p class="shop-name">{{ merchant.shopNameTH }}</p>
+      <b-col cols="9" class="restaurant-info-container">
+        <p class="shop-bold">{{ merchant.shopNameTH }}</p>
+        <p class="shop-grey" v-html="merchant.fullDescription"></p>
+        <hr class="solid" />
+        <p class="shop-grey" v-html="merchant.highlightText"></p>
+        <strong class="menu-suggested">เมนูแนะนำ:</strong>
+        <p class="shop-grey inline">
+          {{ merchant.recommendedItems.join(',') }}
+        </p>
+        <FacilitiesSection
+          :facilities="merchant.facilities"
+        ></FacilitiesSection>
       </b-col>
     </b-row>
   </b-container>
@@ -24,22 +34,31 @@ export default {
 
 <style>
 .restaurant-container {
-  padding: 0;
-  border: 1px solid black;
+  padding: 5px;
+  border: 1px solid #dae9f0;
   margin-bottom: 10px;
 }
-.row,
-.col {
+.restaurant-info-container {
+  margin-top: 10px;
+}
+.no-pm {
   padding: 0;
   margin: 0;
 }
 .cover-image {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
 }
-.shop-name {
+.shop-bold {
   font-size: 20px;
   font-weight: bold;
+}
+.shop-grey {
+  font-size: 17px;
+  color: grey;
+}
+.inline {
+  display: inline;
+}
+.black {
+  color: black;
 }
 </style>

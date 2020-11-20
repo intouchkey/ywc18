@@ -60,6 +60,26 @@ export default {
         data.provinces
       )
       this.merchants = data.merchants
+
+      this.merchants.forEach((merchant) => {
+        let bathString = '   |   '
+
+        for (let i = 0; i < 4; i++) {
+          if (i < merchant.priceLevel) {
+            bathString += '<strong class="black">฿</strong>'
+          } else {
+            bathString += '฿'
+          }
+        }
+
+        merchant.fullDescription =
+          merchant.subcategoryName +
+          bathString +
+          '   |   ' +
+          merchant.addressDistrictName +
+          ' ' +
+          merchant.addressProvinceName
+      })
     },
   },
 }

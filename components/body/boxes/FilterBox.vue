@@ -53,10 +53,12 @@ export default {
 
 <style>
 .filter-container {
-  border: 1px solid black;
+  border: 1px solid #a1afc0;
   padding: 15px;
+  line-height: 30px;
 }
 .topic {
   font-weight: bolder;
+  color: black;
 }
 </style>

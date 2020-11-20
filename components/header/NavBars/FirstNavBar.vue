@@ -81,6 +81,8 @@ export default {
   border-right: none;
   border-color: #ced4da;
   padding-left: 10px;
+  font-size: 15px;
+  height: 100%;
 }
 
 .custom-bg-dark-blue {

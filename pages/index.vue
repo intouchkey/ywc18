@@ -77,6 +77,7 @@ export default {
 
 <style>
 .main-container {
+  font-family: IBM Plex Sans Thai, sans-serif;
   background-image: url('https://search-merchant.xn--42caj4e6bk1f5b1j.com/images/result-bg.png');
   background-repeat: no-repeat;
   background-attachment: scroll;

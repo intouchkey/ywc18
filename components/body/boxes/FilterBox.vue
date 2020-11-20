@@ -56,6 +56,7 @@ export default {
   border: 1px solid #a1afc0;
   padding: 15px;
   line-height: 30px;
+  background-color: white;
 }
 .topic {
   font-weight: bolder;

@@ -4,7 +4,7 @@
       <div class="row col-12 align-items-center">
         <div class="col-lg-3 col-md-2 col-sm-2 col-3">
           <img
-            class="d-none d-md-block"
+            class="d-none d-md-block logo"
             src="https://search-merchant.คนละครึ่ง.com/images/halfhalf-logo.png"
           />
           <img
@@ -24,7 +24,7 @@
                 aria-label="Search"
               />
             </div>
-            <span class="col-2 input-group-text red lighten-3" id="basic-text1"
+            <span class="col-1 input-group-text red lighten-3" id="basic-text1"
               ><i class="fas fa-search text-grey" aria-hidden="true"></i
             ></span>
           </div>
@@ -71,5 +71,9 @@ export default {
 
 .grey-search-bar {
   border-radius: 6%;
+}
+
+.logo {
+  width: 160px;
 }
 </style>

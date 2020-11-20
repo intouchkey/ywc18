@@ -1,27 +1,18 @@
 <template>
   <b-container class="restaurant-container">
-    <b-row class="h-80">
-      <b-col cols="3" class="no-pm">
+    <div
+      class="main"
+      style="width: 100%; display: inline-flex; justify-content: space-between"
+    >
+      <div class="no-pm" style="display: flex">
         <b-img
           class="img-fluid cover-image"
           :src="merchant.coverImageId"
           alt="Image"
         ></b-img>
-      </b-col>
-      <b-col cols="9" class="restaurant-info-container">
-        <p class="shop-bold">{{ merchant.shopNameTH }}</p>
-        <p class="shop-grey" v-html="merchant.fullDescription"></p>
-        <hr class="solid" />
-        <p class="shop-grey" v-html="merchant.highlightText"></p>
-        <strong class="menu-suggested">เมนูแนะนำ:</strong>
-        <p class="shop-grey inline">
-          {{ merchant.recommendedItems.join(',') }}
-        </p>
-        <FacilitiesSection
-          :facilities="merchant.facilities"
-        ></FacilitiesSection>
-      </b-col>
-    </b-row>
+      </div>
+      <RestaurantInfoBox :merchant="merchant"></RestaurantInfoBox>
+    </div>
   </b-container>
 </template>
 
@@ -34,31 +25,36 @@ export default {
 
 <style>
 .restaurant-container {
-  padding: 5px;
+  padding: 5px 5px 0px 5px;
   border: 1px solid #dae9f0;
+  background-color: white;
   margin-bottom: 10px;
 }
-.restaurant-info-container {
-  margin-top: 10px;
+.cover-image {
+  width: 250px;
+  height: 250px;
 }
 .no-pm {
+  width: 35%;
   padding: 0;
   margin: 0;
 }
-.cover-image {
-}
-.shop-bold {
-  font-size: 20px;
-  font-weight: bold;
-}
-.shop-grey {
-  font-size: 17px;
-  color: grey;
-}
-.inline {
-  display: inline;
-}
-.black {
-  color: black;
+
+@media screen and (max-width: 576px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .restaurant-container {
+    padding: 0px;
+  }
+  .cover-image {
+    width: 100%;
+    height: 250px;
+  }
+  .no-pm {
+    width: 100%;
+  }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="custom-drop-down-container">
-    <p class="topic">{{ topic }}</p>
+    <p v-if="topic" class="topic">{{ topic }}</p>
     <select :text="defaultText">
       <option class="first-op" value="" disabled selected>
         {{ defaultText }}

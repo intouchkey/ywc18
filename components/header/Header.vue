@@ -1,16 +1,15 @@
 <template>
   <div>
-    <FirstNavBar></FirstNavBar>
+    <FirstNavBar :provinces="provinces"></FirstNavBar>
     <SecondNavBar></SecondNavBar>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Header",
-};
+  name: 'Header',
+  props: ['provinces'],
+}
 </script>
 
-<style>
-
-</style>
+<style></style>

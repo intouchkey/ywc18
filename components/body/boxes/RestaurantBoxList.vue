@@ -31,6 +31,9 @@ button {
   background: white;
   font-size: 15px;
 }
+button:focus {
+  outline: 0;
+}
 
 @media screen and (max-width: 576px) {
   button {

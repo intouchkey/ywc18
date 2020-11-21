@@ -46,7 +46,7 @@ export default {
       })
 
       this.priceRange = ['ทั้งหมด'].concat(data.priceRange)
-      this.provinces = ['พื้นที่ไกล้ฉัน', 'สถานที่ทั้งหมด'].concat(
+      this.provinces = ['สถานที่ทั้งหมด'].concat(
         data.provinces
       )
       this.merchants = data.merchants

@@ -46,7 +46,7 @@
         <div class="col-sm-10 col-9 d-md-none no-pd">
           <div class="col-12 search-bar-filter-container">
             <input
-              class="form-control my-0 py-1 red-border"
+              class="form-control my-0 py-1 red-border search-bar"
               type="text"
               placeholder="ค้นหา ชื่อ ร้านอาหาร และเครื่องดื่ม ร้านธงฟ้า ร้านค้า OTOP และสินค้าทั่วไป"
               aria-label="Search"
@@ -137,5 +137,12 @@ export default {
 .filter-image {
   -webkit-transform: scale(0.6);
   width: 20%;
+}
+
+@media screen and (max-width: 576px) {
+  .search-bar {
+    border-radius: 10px 0px 0px 10px;
+    border-right: none;
+  }
 }
 </style>

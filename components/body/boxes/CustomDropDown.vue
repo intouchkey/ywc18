@@ -1,7 +1,7 @@
 <template>
   <div class="custom-drop-down-container">
     <p v-if="topic" class="topic">{{ topic }}</p>
-    <select :text="defaultText">
+    <select :text="defaultText" v-model="localSelected">
       <option class="first-op" value="" disabled selected>
         {{ defaultText }}
       </option>
@@ -13,7 +13,17 @@
 <script>
 export default {
   name: 'CustomDropDown',
-  props: ['items', 'topic', 'defaultText'],
+  props: ['items', 'topic', 'defaultText', 'selected'],
+  computed: {
+    localSelected: {
+      get: function () {
+        return this.selected
+      },
+      set: function (newValue) {
+        this.$emit('update-selected', newValue)
+      },
+    },
+  },
 }
 </script>
 

@@ -1,10 +1,11 @@
 <template>
-  <p class="search-text">ผลการค้นหา ร้านอาหารและเครื่องดื่ม ทั้งหมด</p>
+  <p class="search-text">ผลการค้นหา {{ selectedText }}</p>
 </template>
 
 <script>
 export default {
   name: 'SearchTextBar',
+  props: ['selectedText'],
 }
 </script>
 

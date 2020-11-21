@@ -1,9 +1,9 @@
 <template>
   <div class="restaurants-container">
-    <div v-for="merchant in merchants" :key="merchant" :name="merchant">
+    <div v-for="merchant in merchants" :key="merchant.shopNameTH" :name="merchant">
       <RestaurantBox :merchant="merchant"></RestaurantBox>
     </div>
-    <div class="button-wrapper">
+    <div v-if="merchants.length" class="button-wrapper">
       <button class="button">ดูเพิ่มเติม</button>
     </div>
   </div>
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style>
-.restaurants-container {
+.restaurants-container{
   margin-bottom: 20px;
 }
 .button-wrapper {

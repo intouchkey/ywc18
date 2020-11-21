@@ -21,6 +21,13 @@ html {
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
 }
 </style>
